@@ -32,11 +32,10 @@
 ```mermaid
 %% описание схемы
 graph LR;
-  untracked -- "git add" --> staged;
-  staged    -- "???"     --> tracked/comitted;
-
-%% стрелка без текста для примера: 
-  A --> B;
+  untracked -- "git add" --> staged+tracked -- "git commit" --> tracked;
+  modified -- "git add" --> staged+tracked;
+  tracked -- "изменение" --> modified;
+  staged+tracked -- "изменение" --> modified;
 
 ```
 
