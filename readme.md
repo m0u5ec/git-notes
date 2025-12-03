@@ -52,5 +52,3 @@ graph LR;
   staged+tracked -- "изменение" --> modified;
 
 ```
-
-6450b8c
